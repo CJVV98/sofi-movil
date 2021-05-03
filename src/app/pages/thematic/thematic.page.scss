@@ -1,0 +1,32 @@
+.label-subtitle{
+    font-weight: bold;
+    font-size: 20px;
+    color: white;
+    text-shadow: 2px 3px 2px #000;
+    -webkit-text-stroke: 0.3px black;
+}
+
+.logo-header{
+    margin-left: 10%;
+    width: 100%;
+}
+
+.logo-header-start{
+    align-items: flex-start;
+    width: 80%;
+}
+
+ion-toolbar{
+    border-bottom: 2px solid #000 ;
+}
+
+.contenedor{
+    display: flex;
+    align-items: center;
+    padding: 1%;
+}
+
+.logo-sofi{
+    margin-top: 15%;
+    width: 35%;
+}

@@ -1,0 +1,7 @@
+{
+  "name": "sofiMovil",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

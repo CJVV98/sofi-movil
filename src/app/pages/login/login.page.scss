@@ -1,0 +1,49 @@
+.circulo {
+    height: 70px; 
+    width: 100px; 
+    border-radius: 0 0 100%; 
+    background: #00509F;
+
+  }
+
+.oval {
+    width: 400px;
+  height:70px;
+  border-radius: 50% / 100%;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+    background: #00509F;
+}
+
+.logo-header{
+    margin-left: 30%;
+    margin-right: 5%;
+    width: 65%;
+}
+
+.logo-header-start{
+    margin-left: 5%;
+    margin-right: 30%;
+    width: 65%;
+}
+
+.contenedor{
+    display: flex;
+    align-items: center;
+}
+
+.logo-sofi{
+    margin-top: 15%;
+    width: 35%;
+}
+
+ion-item{
+    width: 70%;
+}
+
+.boton{
+    margin-top: 10%;
+    border: none;
+    border-radius: 10%;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+}

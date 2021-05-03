@@ -1,0 +1,102 @@
+ion-content{
+    --background: none;
+    background-image: url('../../../assets/img/13188.png');
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.h1-title{
+    text-transform: uppercase;
+    font-size: 240%;
+    font-weight: bold;
+    color: white;
+    text-shadow: 4px 5px 4px #000;
+    margin: 14%;
+    margin-top: 25%;
+    margin-bottom: 10% !important;
+}
+
+.login-button{
+    background-color: #01509F;
+    color: white;
+    box-shadow: 4px 4px 8px #000;
+    border-radius: 10px;
+    border: 0;
+    outline: none;
+    width: 50%;
+    padding: 3%;
+    margin-top: 10%;
+}
+
+.divider {
+    display: flex;
+    
+    &:before,
+    &:after {
+      content: "";
+      flex: 1;
+    }
+  }
+  
+  .line {
+    align-items: center;
+    margin: 1em -1em;
+    color: rgb(191, 191, 191);
+    
+    &:before,
+    &:after {
+      height: 1px;
+      margin: 0 1em;
+    }
+  } 
+  
+  .one-line {
+    &:before,
+    &:after {
+       background: rgb(191, 191, 191);
+    }
+  }
+
+.label-subtitle{
+    font-weight: bold;
+    font-size: 20px;
+    color: white;
+    text-shadow: 2px 3px 2px #000;
+    -webkit-text-stroke: 0.3px black;
+}
+
+.logo-header{
+    margin-left: 10%;
+    width: 100%;
+}
+
+.logo-header-start{
+    align-items: flex-start;
+    width: 80%;
+}
+
+ion-toolbar{
+    background-color: #01509F !important;
+}
+
+.contenedor{
+    display: flex;
+    align-items: center;
+    background-color: #01509F;
+    padding: 1%;
+}
+
+.logo-sofi{
+    margin-top: 15%;
+    width: 35%;
+}
+
+ion-item{
+    width: 70%;
+}
+
+.ion-content{
+    background-image: url('../../../assets/img/13188.png') !important;
+    background-repeat: no-repeat;
+    background-position: top center;
+}
