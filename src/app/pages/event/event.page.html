@@ -10,14 +10,14 @@
 </ion-header>
 
 <ion-content>
-
-  <ion-title style="color: aqua;">EVENTOS</ion-title>
-  <ion-searchbar color="light"></ion-searchbar>
+  <br/>
+  <ion-title style="color:#01509f">EVENTOS</ion-title>
+  <ion-searchbar ></ion-searchbar>
   <ion-card>
-    <ion-list>
+    <ion-list *ngFor="let event of events">
       <ion-card>
-        <ion-card-title>Nombre del evento</ion-card-title>
-        <ion-card-subtitle>Descripcion del evento</ion-card-subtitle>
+        <ion-card-title>{{event.name}}</ion-card-title>
+        <ion-card-subtitle>{{event.information}}</ion-card-subtitle>
       </ion-card>
     </ion-list>
   </ion-card>

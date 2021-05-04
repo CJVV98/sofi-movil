@@ -12,9 +12,7 @@ export class HomePage implements OnInit {
   constructor(private service: LoginService) { }
 
   ngOnInit() {
-      this.service.login().subscribe(res=>{
-        console.log(res);
-      })
+    
   }
 
 }

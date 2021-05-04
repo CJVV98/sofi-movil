@@ -13,19 +13,19 @@
 
   <div align="center">
     <ion-img class="logo-sofi" src="../../assets/img/Logo-SoFi_Vertical (1).png"></ion-img>
-    
-    <ion-item>
-      <ion-label position="floating">Usuario</ion-label>
-      <ion-input type="text" required></ion-input>
-    </ion-item>
+    <form [formGroup]="loginForm">
+      <ion-item>
+        <ion-label position="floating">Usuario</ion-label>
+        <ion-input type="text" required formControlName="user"></ion-input>
+      </ion-item>
 
-    <ion-item>
-      <ion-label position="floating">Contraseña</ion-label>
-      <ion-input type="password" required></ion-input>
-    </ion-item>
+      <ion-item>
+        <ion-label position="floating">Contraseña</ion-label>
+        <ion-input type="password" required formControlName="password"></ion-input>
+      </ion-item>
 
-    <ion-button class="boton" type="submit" routerLink="/event">Ingresar</ion-button>
-
+      <ion-button class="boton" type="submit" (click)="login()">Ingresar</ion-button>
+    </form>
   </div>
 
 </ion-content>
