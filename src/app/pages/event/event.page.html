@@ -13,13 +13,12 @@
   <br/>
   <ion-title style="color:#01509f">EVENTOS</ion-title>
   <ion-searchbar ></ion-searchbar>
-  <ion-card>
-    <ion-list *ngFor="let event of events">
+  <div *ngFor="let event of events" class="card-background-page">
       <ion-card>
-        <ion-card-title>{{event.name}}</ion-card-title>
-        <ion-card-subtitle>{{event.information}}</ion-card-subtitle>
+        <img src="https://cdn.pixabay.com/photo/2018/08/09/09/50/democrats-3594094_960_720.jpg"/>
+        <ion-icon name="golf-outline"  style="color:#01509f" ></ion-icon>
+        <div class="card-title">{{event.name}}</div>
+        <div class="card-subtitle">{{event.information}}</div>
       </ion-card>
-    </ion-list>
-  </ion-card>
-
+    </div>
 </ion-content>
