@@ -7,7 +7,7 @@ import { environment } from 'src/environments/environment';
   providedIn: 'root'
 })
 export class EventService {
-  url: string =  `${environment.HOST}api/`;
+  url: string =  `${environment.HOST}/`;
   constructor(private http: HttpClient) { }
 
   consult():any{

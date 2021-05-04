@@ -12,10 +12,10 @@ export class LibraryPage implements OnInit {
   constructor(public service:ContentService) { }
 
   ngOnInit() {
-    this.consultEvents();
+    this.consultArticle();
   }
 
-  consultEvents(){
+  consultArticle(){
     this.service.consultArticles().subscribe((result: { data: Article[]; })=>{
       if(!result){
         return;

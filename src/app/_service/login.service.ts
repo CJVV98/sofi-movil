@@ -10,7 +10,7 @@ import { User } from '../_model/User';
 export class LoginService {
   constructor(private http: HttpClient) { }
   login(user: User):any {
-    return this.http.post( `${environment.HOST}login`, user);
+    return this.http.post( `${environment.HOST}/login`, user);
   }
 
 }

@@ -6,7 +6,7 @@ import { environment } from "src/environments/environment";
     providedIn: 'root'
   })
   export class ContentService {
-    url: string =  `${environment.HOST}api/`;
+    url: string =  `${environment.HOST}/`;
     constructor(private http: HttpClient) { }
   
     consultKeyword():any{

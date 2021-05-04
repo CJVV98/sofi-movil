@@ -3,7 +3,7 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  HOST : "https://sofi.inkdigital.co/api/",
+  HOST : "https://sofi.inkdigital.co/api",
   production: false
 };
 
