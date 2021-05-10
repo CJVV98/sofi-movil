@@ -21,7 +21,8 @@
         </ion-card-title>
         <ion-card-subtitle>{{article.date}}</ion-card-subtitle>
       <p>
-        {{article.content}}
+        {{article.content.substring(0,10)}}
+        <a href="#">Ver mas</a>
       </p>
     </ion-card-content>
   </ion-card>
