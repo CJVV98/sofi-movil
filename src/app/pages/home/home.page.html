@@ -13,15 +13,12 @@
   <div align="center" >
     <h1 class="h1-title">¡Bienvenido!</h1>
     <br><br>
-    <ion-searchbar color="light" style="margin-bottom: 8%;"></ion-searchbar>
+    <ion-searchbar color="light" class="inp-search"></ion-searchbar>
     <ion-label class="label-subtitle">Artículos, temáticas, eventos.</ion-label>
     <br><br>
     <span class="divider line one-line">o</span>
-    <input type="button" class="login-button" value="Inicia Sesión" routerLink="/login">
+    <input type="button" *ngIf="active" class="login-button" value="Inicia Sesión" routerLink="/login">
   </div>
-<!--<ion-card>
-  <ion-card-header>
-    <h1>Bienvenido!</h1>
-  </ion-card-header>
-</ion-card>-->
+  <br/>
+  <br/>
 </ion-content>

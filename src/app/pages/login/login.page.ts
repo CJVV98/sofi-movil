@@ -17,6 +17,7 @@ export class LoginPage implements OnInit {
   constructor(public service: LoginService, private router: Router ) { }
 
   ngOnInit() {
+    window.localStorage.setItem("token", "");
     this.initForm();
   }
   initForm() {
@@ -36,7 +37,8 @@ export class LoginPage implements OnInit {
       console.log(data);
       this.session = data;
       console.log(this.session);
-      window.sessionStorage.setItem("token", this.session.access_token);
+      window.localStorage.setItem("token", this.session.access_token);
+      window.localStorage.setItem("user_id", this.session.user.id.toString());
       this.router.navigateByUrl('/', { skipLocationChange: true }).then(() =>
         this.router.navigate([`/home/`]));
     }, error => {

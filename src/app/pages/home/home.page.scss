@@ -7,7 +7,7 @@ ion-content{
 }
 .h1-title{
     text-transform: uppercase;
-    font-size: 240%;
+    font-size: 100%;
     font-weight: bold;
     color: white;
     text-shadow: 4px 5px 4px #000;
@@ -27,7 +27,14 @@ ion-content{
     padding: 3%;
     margin-top: 10%;
 }
-
+.ion-color.sc-ion-searchbar-md-h .searchbar-input.sc-ion-searchbar-md {
+    background: white !important;
+}
+.inp-search{
+    margin-bottom: 8%;
+    background: transparent;
+    color: black;
+}
 .divider {
     display: flex;
     

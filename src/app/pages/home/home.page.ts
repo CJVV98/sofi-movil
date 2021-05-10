@@ -8,10 +8,12 @@ import { UserService } from 'src/app/_service/user.service';
   styleUrls: ['./home.page.scss'],
 })
 export class HomePage implements OnInit {
-
+  active:boolean=true;
   constructor(private service: LoginService) { }
 
   ngOnInit() {
+    let token=window.localStorage.getItem("token");
+    this.active=(token !== undefined && token.length>6)?false:true;
     
   }
 

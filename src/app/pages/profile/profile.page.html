@@ -1,8 +1,8 @@
 <ion-header style="margin: 0% !important;">
-  <ion-toolbar >
+  <ion-toolbar>
     <div class="contenedor">
-        <ion-img class="logo-header-start" src="./assets/img/Logo-SoFi_Horizontal.png">
-        </ion-img>
+      <ion-img class="logo-header-start" src="./assets/img/Logo-SoFi_Horizontal.png">
+      </ion-img>
       <ion-img class="logo-header" src="./assets/img/moodlelogo.png">
       </ion-img>
     </div>
@@ -10,5 +10,59 @@
 </ion-header>
 
 <ion-content>
+  <br />
+  <ion-title class="title"><h1>MI PERFIL</h1></ion-title>
+  <br />
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <div>
+          <img src="assets/img/user.png" width="120" class="img-user">
+        </div>
+      </ion-col>
+      <ion-col>
+        <div>
+          <ion-button size="small" color="#01509f" class="bt-prof">
+            <ion-icon name="notifications-outline"></ion-icon>
+            &nbsp;
+            Novedades
+          </ion-button>
+          <br />
+          <ion-button size="small" color="#01509f" class="bt-prof">
+            <ion-icon name="star-outline"></ion-icon>
+            &nbsp;
+            Favoritos
+          </ion-button>
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <br/>
+  <ion-title class="title-sec">
+    Mi Informacion  &nbsp;&nbsp;
+    <ion-icon name="create-outline"></ion-icon>
+  </ion-title>
+  <br/>
+  <ion-grid class="grid-items" *ngIf="user">
+    <ion-row>
+      <b>Identificacion: </b> &nbsp; {{user.identification}}
+    </ion-row>
+    <ion-row>
+      <b>Nombre: </b> &nbsp; {{user.name}}
+    </ion-row>
+    <ion-row>
+      <b>Apellido: </b> &nbsp; {{user.lastname}}
+    </ion-row>
+    <ion-row>
+      <b>Correo: </b> &nbsp; {{user.email}}
+    </ion-row>
+    <ion-row>
+      <b>Telefono: </b> &nbsp; {{user.phone}}
+    </ion-row>
+    <ion-row>
+      <b>Ciudad: </b> &nbsp; {{user.city}}
+    </ion-row>
+  </ion-grid>
+  <br/>
 
 </ion-content>

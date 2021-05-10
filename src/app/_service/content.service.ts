@@ -1,34 +1,24 @@
 import { HttpClient, HttpHeaders } from "@angular/common/http";
 import { Injectable } from "@angular/core";
 import { environment } from "src/environments/environment";
+import { Token } from "./Token";
 
 @Injectable({
     providedIn: 'root'
   })
   export class ContentService {
     url: string =  `${environment.HOST}/`;
-    constructor(private http: HttpClient) { }
+    constructor(private http: HttpClient, private token:Token) { }
   
     consultKeyword():any{
-      let options=this.token();
+      let options=this.token.token();
       return this.http.get<any>(`${this.url}keywords`, options);
     }
   
     consultArticles():any{
-      let options=this.token();
+      let options=this.token.token();
       return this.http.get<any>(`${this.url}articles`, options);
     }
   
-    token():any{
-      const headers = new Headers();
-      /** In Angular 5, including the header Content-Type can invalidate your request */
-      let optiosHeader = new HttpHeaders({
-          'Authorization': 'Bearer '+window.sessionStorage.getItem("token")
-       });
-       let options = {
-          headers: optiosHeader
-       }
-       return options;
-    }
-  
+   
   }
