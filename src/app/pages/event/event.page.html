@@ -17,7 +17,9 @@
     <ion-list *ngFor="let event of events" class="list-event">
       <ion-item>
         <ion-avatar slot="start">
-          <img src="https://cdn.pixabay.com/photo/2018/08/09/09/50/democrats-3594094_960_720.jpg">
+          <div *ngFor="let image of event.resources">
+            <img width="300" height="120" [src]="image.url"> 
+          </div>    
         </ion-avatar>
         <ion-label>
           <h2>{{event.name}}</h2>

@@ -1,3 +1,5 @@
+import { Resource } from "./Resource";
+
 export class Event {   
     id!: number;
     name!: string;
@@ -7,7 +9,7 @@ export class Event {
     information!: string;
     place!: string;
     visibility!: string;
-    resources!: any[];
+    resources: Resource[]=[];
     notifications!: Notification[];
     user_id!:number;
 
