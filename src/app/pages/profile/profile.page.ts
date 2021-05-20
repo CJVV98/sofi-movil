@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { InfoUser } from 'src/app/_model/InfoUser';
+import { PhotoService } from 'src/app/_service/photo.service';
 import { UserService } from 'src/app/_service/user.service';
 
 @Component({
@@ -10,12 +11,19 @@ import { UserService } from 'src/app/_service/user.service';
 export class ProfilePage implements OnInit {
   user!: InfoUser;
   name!:string;
-  constructor(public service:UserService, ) { }
+  urlImage:string="assets/img/user.png";
+  constructor(public service:UserService, private photoService: PhotoService) { }
 
   ngOnInit() {
      this.consultInfo();
   }
-
+  takePhoto(){
+    let image=this.photoService.addNewToGallery() as Object;
+    setTimeout(()=>{
+      this.urlImage=image['__zone_symbol__value'];
+    },6000);
+    
+  }
   consultInfo() {
     let userId=window.localStorage.getItem("user_id");
     this.service.consultUser(userId).subscribe(result=>{
@@ -26,7 +34,10 @@ export class ProfilePage implements OnInit {
       this.name=this.user.name;
       console.log(this.user);
     });
- }
+  }
+
+  
+
 }
 
 

@@ -17,7 +17,10 @@
     <ion-row>
       <ion-col>
         <div>
-          <img src="assets/img/user.png" width="120" class="img-user">
+          <img  [src]="urlImage" width="120"  height="120" class="img-user">
+          <ion-button  (click)="takePhoto()" size="small" color="#01509f" class="bt-prof-img">
+            <ion-icon name="camera"></ion-icon>
+          </ion-button>
         </div>
       </ion-col>
       <ion-col>

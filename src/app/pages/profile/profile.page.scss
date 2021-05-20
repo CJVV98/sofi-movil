@@ -41,11 +41,18 @@ ion-toolbar{
 }
 .bt-prof{
     text-transform: capitalize;
-    background-color: #01509f;
+    color: #01509f;
+    font-weight: bold;
 }
 .img-user{
     margin-left: 15%;
+    border-radius: 50%;
 }
 .grid-items{
     margin-left: 15%;
+}
+.bt-prof-img{
+    margin-left: 70%;
+    margin-top: -28px;
+    color: #01509f;
 }
