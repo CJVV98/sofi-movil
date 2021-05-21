@@ -11,4 +11,5 @@ export class Article {
     total_score!:number;
     keywords!: any[];
     author!:string;
+    primary_image!:string;
 }

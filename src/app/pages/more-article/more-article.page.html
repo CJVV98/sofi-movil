@@ -10,8 +10,10 @@
 </ion-header>
 
 
-<ion-content>
-   <div [innerHTML]="article.content">
+<ion-content >
+    <h1 class="title-article">{{article.title}}</h1>
+    <small>{{article.author}}</small>
+   <div [innerHTML]="article.content" class="content-article">
      
    </div>
 </ion-content>

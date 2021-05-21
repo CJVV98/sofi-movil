@@ -20,6 +20,13 @@ export class EventPage implements OnInit {
         return;
       };
       this.events=result.data;
+    }, error=>{
+      this.service.consultPublic().subscribe((result: { data: Event[]; })=>{
+        if(!result){
+          return;
+        };
+        this.events=result.data;
+      })
     })
   }
 

@@ -19,6 +19,10 @@ import { Token } from "./Token";
       let options=this.token.token();
       return this.http.get<any>(`${this.url}articles`, options);
     }
+
+    consultArticlesPublic():any{
+      return this.http.get<any>(`${this.url}articles/public`);
+    }
   
    
   }

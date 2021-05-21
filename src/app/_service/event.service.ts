@@ -16,4 +16,8 @@ export class EventService {
     return this.http.get<any>(`${this.url}events`, options);
   }
 
+  consultPublic(): any {
+    return this.http.get<any>(`${this.url}events/public`);
+  }
+
 }

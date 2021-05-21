@@ -12,8 +12,15 @@ export class HomePage implements OnInit {
   constructor(private service: LoginService) { }
 
   ngOnInit() {
-    let token=window.localStorage.getItem("token")==null?"":window.localStorage.getItem("token");
-    this.active=(token !== undefined && token.length>6)?false:true;
+    if(window.localStorage.getItem("token")==null ){
+      window.localStorage.setItem("token", "");
+      this.active=true;
+    }else{
+      if(window.localStorage.getItem("token")=="")
+       this.active=true;
+      else
+        this.active=false;
+    }
     
   }
 

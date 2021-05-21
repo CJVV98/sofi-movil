@@ -13,6 +13,10 @@ export class MoreArticlePage implements OnInit {
 
   ngOnInit() {
     this.article=this.infoArt.getArticle();
+    console.log(this.article.title);
   }
-
+  ngAfterViewInit(){
+    this.article=this.infoArt.getArticle();
+    console.log(this.article.title);
+  }
 }
