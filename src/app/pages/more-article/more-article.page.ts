@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Article } from 'src/app/_model/Article';
+import { ContentService } from 'src/app/_service/content.service';
 import { InfoArticle } from 'src/app/_service/infoArticle.service';
 
 @Component({
@@ -9,11 +10,20 @@ import { InfoArticle } from 'src/app/_service/infoArticle.service';
 })
 export class MoreArticlePage implements OnInit {
   article!:Article;
-  constructor(public infoArt:InfoArticle) { }
+  constructor(public infoArt:InfoArticle, public service:ContentService) { }
 
   ngOnInit() {
-    this.article=this.infoArt.getArticle();
-    console.log(this.article.title);
+    setTimeout(()=>{
+      this.article=this.infoArt.getArticle();
+      console.log(this.article.title);
+      this.service.getArticle(this.article.id).subscribe(result=>{
+        if(!result){
+          return;
+        };
+        this.article=result.data;
+      });
+    },1000);
+
   }
   ngAfterViewInit(){
     this.article=this.infoArt.getArticle();
