@@ -7,7 +7,12 @@ const routes: Routes = [
   {
     path: '',
     component: LibraryPage
-  }
+  },
+  {
+    path: 'more-article/:privacidad/:id',  
+    loadChildren: () => import('../more-article/more-article.module').then( m => m.MoreArticlePageModule)
+
+  },
 ];
 
 @NgModule({

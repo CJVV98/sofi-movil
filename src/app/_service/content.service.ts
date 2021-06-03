@@ -16,19 +16,19 @@ import { Token } from "./Token";
       return this.http.get<any>(`${this.url}keywords`, options);
     }
   
-    consultArticles():any{
+    consultArticles(type:String):any{
       let options=this.token.token();
-      return this.http.get<any>(`${this.url}articles`, options);
+      return this.http.get<any>(`${this.url}articles/type/${type}`, options);
     }
 
-    getArticle(id:number):any{
+    getArticle(id:number, route:String):any{
       let options=this.token.token();
-      return this.http.get<any>(`${this.url}articles/${id}`, options);
+      return this.http.get<any>(`${this.url}articles/${route}${id}`, options);
     }
 
 
-    consultArticlesPublic():any{
-      return this.http.get<any>(`${this.url}articles/public`);
+    consultArticlesPublic(type:String):any{
+      return this.http.get<any>(`${this.url}articles/public/${type}`);
     }
   
    

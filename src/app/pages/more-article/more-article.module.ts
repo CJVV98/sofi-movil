@@ -7,13 +7,14 @@ import { IonicModule } from '@ionic/angular';
 import { MoreArticlePageRoutingModule } from './more-article-routing.module';
 
 import { MoreArticlePage } from './more-article.page';
-
+import { BarRatingModule } from 'ngx-bar-rating';
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    MoreArticlePageRoutingModule
+    MoreArticlePageRoutingModule,
+    BarRatingModule
   ],
   declarations: [MoreArticlePage]
 })

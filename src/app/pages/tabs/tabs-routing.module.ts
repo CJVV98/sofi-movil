@@ -34,7 +34,7 @@ const routes: Routes = [
         loadChildren: () => import('../profile/profile.module').then(m => m.ProfilePageModule)
       },
       {
-        path: 'more-article',  
+        path: 'more-article/:privacidad/:id',  
         loadChildren: () => import('../more-article/more-article.module').then( m => m.MoreArticlePageModule)
     
       },

@@ -3,7 +3,7 @@
     <div class="contenedor">
         <ion-img class="logo-header-start" src="./assets/img/Logo-SoFi_Horizontal.png">
         </ion-img>
-      <ion-img class="logo-header" src="./assets/img/moodlelogo.png">
+        <ion-img class="logo-header" src="./assets/img/logoFiscalia.jpg">
       </ion-img>
     </div>
   </ion-toolbar>
@@ -23,7 +23,7 @@
       <p style="text-align: justify">
         {{article.extract}}
         <br/>
-        <button size="small" (click)="moreArticle(article)" style="background:#01509f; color: blanchedalmond;">Ver mas</button>
+        <button size="small" (click)="moreArticle(article.id)" style="background:#01509f; color: blanchedalmond;">Ver mas</button>
       </p>
     </ion-card-content>
   </ion-card>

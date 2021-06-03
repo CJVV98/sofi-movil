@@ -12,8 +12,9 @@
 
 <ion-content >
     <h1 class="title-article">{{article.title}}</h1>
-    <small>{{article.author}}</small>
-   <div [innerHTML]="article.content" class="content-article">
+    <h6 class="title-article">{{article.author}}</h6>
+    <bar-rating [(rate)]="faRate"  [max]="5" [theme]="'stars'" ></bar-rating>
+  <div [innerHTML]="article.content" class="content-article">
      
    </div>
 </ion-content>
