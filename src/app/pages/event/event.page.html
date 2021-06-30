@@ -1,5 +1,5 @@
 <ion-header style="margin: 0% !important;">
-  <ion-toolbar >
+  <ion-toolbar   class="toolbar" >
     <div class="contenedor">
         <ion-img class="logo-header-start" src="./assets/img/Logo-SoFi_Horizontal.png">
         </ion-img>
@@ -12,19 +12,19 @@
 <ion-content>
   <br/>
   <ion-title style="color:#01509f">EVENTOS</ion-title>
-  <ion-searchbar ></ion-searchbar>
-
+  <ion-searchbar style="color: black;" (keyup)="search($event)" ></ion-searchbar>
     <ion-list *ngFor="let event of events" class="list-event">
       <ion-item>
         <ion-avatar slot="start">
           <div *ngFor="let image of event.resources">
-            <img width="80" height="80" [src]="image.url"> 
+            <img width="80" height="55" class="img-event" [src]="image.url"> 
           </div>    
         </ion-avatar>
         <ion-label>
-          <h2>{{event.name}}</h2>
+          <h2 (click)="moreEvent(event)" >{{event.name}}</h2>
           <h3>{{event.information}}</h3>
           <p>{{event.start_date}}</p>
+          
         </ion-label>
       </ion-item>
       

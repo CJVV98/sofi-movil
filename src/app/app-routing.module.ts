@@ -19,6 +19,11 @@ const routes: Routes = [
     loadChildren: () => import('./pages/login/login.module').then( m => m.LoginPageModule)
   },
   {
+    path: 'forgot-password',  
+    loadChildren: () => import('./pages/forgot-password/forgot-password.module').then( m => m.ForgotPasswordPageModule)
+
+  },
+  {
     path: 'event',
     loadChildren: () => import('./pages/event/event.module').then( m => m.EventPageModule)
   },
@@ -34,7 +39,7 @@ const routes: Routes = [
     path: 'profile',
     loadChildren: () => import('./pages/profile/profile.module').then( m => m.ProfilePageModule)
   },
-
+ 
 ];
 
 @NgModule({

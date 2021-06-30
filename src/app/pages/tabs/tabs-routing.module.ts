@@ -38,6 +38,7 @@ const routes: Routes = [
         loadChildren: () => import('../more-article/more-article.module').then( m => m.MoreArticlePageModule)
     
       },
+ 
       {
         path: '',
         redirectTo: '/tabs/home',

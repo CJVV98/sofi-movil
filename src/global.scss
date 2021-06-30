@@ -31,3 +31,54 @@
 .ion-color.sc-ion-searchbar-md-h .searchbar-input.sc-ion-searchbar-md {
     background: white !important;
 }
+.alert-title.sc-ion-alert-md {
+    color: #00366b;
+    font-size: 20px;
+    font-weight: 500;
+    text-transform: uppercase;
+    text-align: center;
+    border-bottom: #00366b 3px double;
+    font-weight: bold;
+}
+
+.alert-wrapper.sc-ion-alert-md { 
+    padding: 3px 1px;
+    border: #003264 2px solid;
+    border-radius: 20px;
+    -webkit-box-shadow: 0 11px 15px -7px rgba(0, 0, 0, 0.2), 0 24px 38px 3px rgba(0, 0, 0, 0.14), 0 9px 46px 8px rgba(0, 0, 0, 0.12);
+    box-shadow: 0 11px 15px -7px rgba(0, 0, 0, 0.2), 0 24px 38px 3px rgba(0, 0, 0, 0.14), 0 9px 46px 8px rgba(0, 0, 0, 0.12);
+}
+.alert-sub-title.sc-ion-alert-md {
+    color: #00000091;
+    font-size: 14px
+}
+.alert-head.sc-ion-alert-md + .alert-message.sc-ion-alert-md {
+    padding-top: 0;
+    color: black;
+    text-align: justify;
+}
+
+.my-error .alert-wrapper.sc-ion-alert-md {
+    background: #ffffff;
+    padding: 3px 1px;
+    border: #e1001e 2px solid;
+    border-radius: 20px;
+    -webkit-box-shadow: 0 11px 15px -7px rgba(0, 0, 0, 0.2), 0 24px 38px 3px rgba(0, 0, 0, 0.14), 0 9px 46px 8px rgba(0, 0, 0, 0.12);
+    box-shadow: 0 11px 15px -7px rgba(0, 0, 0, 0.2), 0 24px 38px 3px rgba(0, 0, 0, 0.14), 0 9px 46px 8px rgba(0, 0, 0, 0.12);
+
+}
+
+.my-error .alert-title.sc-ion-alert-md {
+    color: #e1001e;
+    font-size: 12px;
+    font-weight: 200;
+    text-transform: uppercase;
+    text-align: center;
+    border-bottom: #e1001e 3px solid;
+    font-weight: bold;
+}
+
+.my-error .alert-sub-title.sc-ion-alert-md {
+    color: #00000091;
+    font-size: 10px
+}

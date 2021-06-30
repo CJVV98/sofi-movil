@@ -13,10 +13,19 @@ import { MoreArticlePage } from '../more-article/more-article.page';
 })
 export class LibraryPage implements OnInit {
   articles!: Array<Article>;
+  articlesGen!: Array<Article>;
   constructor(public service: ContentService, public servArt: InfoArticle, private router: Router) { }
   public: boolean = false;
   ngOnInit() {
     this.consultArticle();
+  }
+
+  search(event: any) {
+    const filterValue = (event.target as HTMLInputElement).value;
+    setTimeout(() => {
+      this.articles = this.articlesGen.filter(p => p.title.includes(filterValue) ||(p.author!= undefined && p.author.includes(filterValue))
+      || p.extract.includes(filterValue) || p.keywords.toString().includes(filterValue));
+    }, 100)
   }
 
   consultArticle() {
@@ -32,6 +41,7 @@ export class LibraryPage implements OnInit {
         };
         this.public = true;
         this.articles = result.data;
+        this.articlesGen=this.articles;
       })
     });
   }

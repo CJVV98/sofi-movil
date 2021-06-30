@@ -31,5 +31,49 @@ import { Token } from "./Token";
       return this.http.get<any>(`${this.url}articles/public/${type}`);
     }
   
+    addFavorite(user:number, articles:number[]){
+      let body = {
+        "userid": user,
+        "articlesids": articles
+      };
+      return this.http.post(`${environment.HOST}/addFavoriteArticlesToUser`, body);
+    }
+
+    verifyFavorite(user:number, article:number){
+      let body = {
+        "userid": user,
+        "articleid": article
+      };
+      return this.http.post(`${environment.HOST}/existFavorite`, body);
+  
+    }
+
+    removeFavorite(user:number, article:number){
+      let body = {
+        "userid": user,
+        "articleid": article
+      };
+      return this.http.post(`${environment.HOST}/removeFavoriteArticlesToUser`, body);
+  
+    }
+
+    addScore(user:number,article:number,qualification:number,details:String){
+      let body = {
+        "userid":user,
+        "articleid":article,
+        "qualification":qualification,
+        "details":details
+      };
+      return this.http.post(`${environment.HOST}/addScoreToArticles`, body);
+  
+    }
+
+    getScore(user:number){
+      let body = {
+        "userid":user
+      };
+      return this.http.post(`${environment.HOST}/getScoresByUser`, body);
+  
+    }
    
   }

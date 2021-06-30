@@ -5,20 +5,28 @@
     text-shadow: 2px 3px 2px #000;
     -webkit-text-stroke: 0.3px black;
 }
-
+.card-article{
+    box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+    margin: 8%;
+}
 .logo-header{
-    margin-left: 10%;
-    width: 100%;
+    margin-left: 20%;
+    width: 30%;
 }
 
 .logo-header-start{
     align-items: flex-start;
-    width: 80%;
+    width: 40%;
+}
+.article-title{
+    color: black;
+    box-shadow: -8px 2px #01509f;
+}
+.toolbar{
+    border-bottom: 2px solid #01509f;
+    border-radius: 0 0 40px 40px;
 }
 
-ion-toolbar{
-    border-bottom: 2px solid #000 ;
-}
 
 .contenedor{
     display: flex;

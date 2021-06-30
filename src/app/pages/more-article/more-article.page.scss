@@ -7,17 +7,22 @@
 }
 
 .logo-header{
-    margin-left: 10%;
-    width: 100%;
+    margin-left: 20%;
+    width: 30%;
 }
 
 .logo-header-start{
     align-items: flex-start;
-    width: 80%;
+    width: 40%;
 }
 
-ion-toolbar{
-    border-bottom: 2px solid #000 ;
+.card-article{
+    box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+    margin: 8%;
+}
+.toolbar{
+    border-bottom: 2px solid #01509f;
+    border-radius: 0 0 40px 40px;
 }
 
 .contenedor{
@@ -67,4 +72,40 @@ ion-toolbar{
 }
 .rating{
     margin-left: 30%;
+}
+
+.in-det{
+    border-right: 1px solid #9d9a9a;
+    border-bottom: 1px solid #9d9a9a;
+    border-left: 1px solid #9d9a9a;
+    width: 80%;
+}
+.card-cal{
+    text-align: justify;
+    text-justify: inter-word;
+    padding : 10%;
+}
+.title-cal{
+    font-size: 18px;
+    font-weight: bold;
+    color: #01509f;
+}
+.ico-but{
+    color: white;
+    margin-left: 40%
+}
+.ico-fav{
+    font-size: 40px;
+    color: #01509f;
+}
+.ico-fav-add{
+    font-size: 40px;
+    color: #01509f;
+    background: #01509f;
+}
+#alert-input-1-0 {
+    border: 1px solid #003264;
+}
+.alert-input-wrapper.sc-ion-alert-md{
+    border: 1px solid #003264;
 }
