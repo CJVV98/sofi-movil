@@ -6,6 +6,7 @@ import { Score } from 'src/app/_model/Score';
 import { ContentService } from 'src/app/_service/content.service';
 import { InfoArticle } from 'src/app/_service/infoArticle.service';
 import { AlertController } from '@ionic/angular';
+import { environment } from 'src/environments/environment';
 @Component({
   selector: 'app-more-article',
   templateUrl: './more-article.page.html',
@@ -32,8 +33,7 @@ export class MoreArticlePage implements OnInit {
     this.id = this.route.snapshot.params.id;
     this.privacity = this.route.snapshot.params.privacidad;
     console.log(window.localStorage.getItem("user_id"));
-    this.view=(window.localStorage.getItem("user_id") != undefined && 
-              window.localStorage.getItem("user_id")!=null && window.localStorage.getItem("user_id")!="")?true:false;       
+    this.view=environment.statusUser=="1";       
     let url = this.privacity ? 'public/show/' : '';
     if(this.view){
       this.userId=parseInt(window.localStorage.getItem("user_id"));
@@ -54,8 +54,6 @@ export class MoreArticlePage implements OnInit {
   async logRatingChange(e:any) {
     console.log(e);
     this.faoRate=e;
-    console.log('dsdsds',   this.scores);
-  
     const alert = await this.alertController.create({
       cssClass: 'my-custom-class',
       header: 'Detalles',

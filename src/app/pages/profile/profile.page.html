@@ -25,13 +25,13 @@
       </ion-col>
       <ion-col>
         <div>
-          <ion-button size="small" color="#01509f" class="bt-prof">
+          <ion-button size="small" color="#01509f" class="bt-prof" (click)="showNotification()">
             <ion-icon name="notifications-outline"></ion-icon>
             &nbsp;
             Novedades
           </ion-button>
           <br />
-          <ion-button size="small" color="#01509f" class="bt-prof">
+          <ion-button size="small" color="#01509f" class="bt-prof" (click)="showFavorites()">
             <ion-icon name="star-outline"></ion-icon>
             &nbsp;
             Favoritos
@@ -43,10 +43,12 @@
   <br/>
   <ion-title class="title-sec">
     Mi Informacion  &nbsp;&nbsp;
-    <ion-icon name="create-outline"></ion-icon>
+    <ion-button size="small" color="#01509f" *ngIf="user.user=='manual'" (click)="editForm()" class="bt-prof">
+      <ion-icon name="create-outline"></ion-icon>
+    </ion-button>
   </ion-title>
   <br/>
-  <ion-grid class="grid-items" *ngIf="user">
+  <ion-grid class="grid-items" *ngIf="!editUser">
     <ion-row>
       <b>Identificacion: </b> &nbsp; {{user.identification}}
     </ion-row>
@@ -60,7 +62,7 @@
       <b>Correo: </b> &nbsp; {{user.email}}
     </ion-row>
     <ion-row>
-      <b>Telefono: </b> &nbsp; {{user.phone}}
+      <b>Telefono: </b> &nbsp; {{user.phone1}}
     </ion-row>
     <ion-row>
       <b>Ciudad: </b> &nbsp; {{user.city}}
@@ -68,4 +70,32 @@
   </ion-grid>
   <br/>
 
+  <form novalidate (ngSubmit)="updateUser()" #f="ngForm" class="form-items" *ngIf="editUser">
+    <ion-item>
+      <ion-label><b>Nombre</b></ion-label>
+      <ion-input required   minlength="3" maxlength="20" pattern="[A-Za-z ]*"  type="text" [(ngModel)]="userEdit.name" name="name"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label><b>Apellido</b></ion-label>
+      <ion-input required type="text"   minlength="3" maxlength="20" pattern="[A-Za-z ]*"  [(ngModel)]="userEdit.lastname" name="altername"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label><b>Telefono</b></ion-label>
+      <ion-input required type="text"   minlength="5" maxlength="11" pattern="[0-9]*" [(ngModel)]="userEdit.phone1" name="phone"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label><b>Ciudad</b></ion-label>
+      <ion-input required type="text" minlength="3" maxlength="20" pattern="[A-Za-z ]*"  [(ngModel)]="userEdit.city" name="city"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label><b>Direccion</b></ion-label>
+      <ion-input required type="text" minlength="3" maxlength="40"  [(ngModel)]="userEdit.address" name="address"></ion-input>
+    </ion-item>
+    <br/>
+    <ion-button type="submit" size="small" color="#01509f" style="margin-left: 38%;" [disabled]="f.invalid" class="bt-prof">
+      <ion-icon name="create-outline"></ion-icon>
+      Editar
+    </ion-button>
+  </form>
+  <br/> <br/> <br/>
 </ion-content>

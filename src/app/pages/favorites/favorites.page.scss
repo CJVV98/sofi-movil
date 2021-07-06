@@ -1,0 +1,58 @@
+.label-subtitle{
+    font-weight: bold;
+    font-size: 20px;
+    color: white;
+    text-shadow: 2px 3px 2px #000;
+    -webkit-text-stroke: 0.3px black;
+}
+
+.logo-header{
+  margin-left: 20%;
+  width: 30%;
+}
+
+.logo-header-start{
+  align-items: flex-start;
+  width: 40%;
+}
+.toolbar{
+  border-bottom: 2px solid #01509f;
+  border-radius: 0 0 40px 40px;
+}
+
+.contenedor{
+    display: flex;
+    align-items: center;
+    padding: 1%;
+}
+
+.logo-sofi{
+    margin-top: 15%;
+    width: 35%;
+}
+
+.card-background-page {
+
+    ion-card {
+      position: relative;
+      text-align: center;
+    }
+  
+    .card-title {
+      position: absolute;
+      top: 36%;
+      font-size: 2.0em;
+      width: 100%;
+      font-weight: bold;
+      color: #fff;
+    }
+  
+    .card-subtitle {
+      font-size: 1.0em;
+      position: absolute;
+      top: 52%;
+      width: 100%;
+      color: #fff;
+    }
+  
+}

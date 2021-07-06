@@ -24,14 +24,18 @@ export class EventPage implements OnInit {
         return;
       };
       this.events=this.eventsGen=result.data;
+      this.events=this.eventsGen=result.data;
+      this.events=this.eventsGen.filter(p=>new Date(p.start_date)>=new Date());
+    
     }, error=>{
       this.service.consultPublic().subscribe((result: { data: Event[]; })=>{
         if(!result){
           return;
         };
         this.events=this.eventsGen=result.data;
+        this.events=this.eventsGen.filter(p=>new Date(p.start_date)>=new Date());
       })
-    })
+    });
   }
   search(event: any) {
     const filterValue = (event.target as HTMLInputElement).value;

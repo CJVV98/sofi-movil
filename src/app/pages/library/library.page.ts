@@ -34,6 +34,7 @@ export class LibraryPage implements OnInit {
         return;
       };
       this.articles = result.data;
+      this.articlesGen=this.articles;
     }, error => {
       this.service.consultArticlesPublic('biblioteca').subscribe((result: { data: Article[]; }) => {
         if (!result) {

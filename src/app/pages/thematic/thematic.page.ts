@@ -31,6 +31,7 @@ export class ThematicPage implements OnInit {
         return;
       };
       this.articles = result.data;
+      this.articlesGen=this.articles;
     }, error => {
       this.service.consultArticlesPublic('tematica').subscribe((result: { data: Article[]; }) => {
         if (!result) {

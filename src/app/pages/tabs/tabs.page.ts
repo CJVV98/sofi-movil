@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { environment } from 'src/environments/environment';
 
 @Component({
   selector: 'app-tabs',
@@ -12,6 +13,8 @@ export class TabsPage implements OnInit {
   ngOnInit() {
     let token=window.localStorage.getItem("token");
     this.active=(token !== undefined && token.length>6)?false:true;
+    if(this.active)
+       environment.statusUser="0";
   }
 
 }

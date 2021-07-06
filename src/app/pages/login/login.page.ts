@@ -5,6 +5,7 @@ import { AlertController } from '@ionic/angular';
 import { Session } from 'src/app/_model/Session';
 import { User } from 'src/app/_model/User';
 import { LoginService } from 'src/app/_service/login.service';
+import { environment } from 'src/environments/environment';
 
 @Component({
   selector: 'app-login',
@@ -35,6 +36,7 @@ export class LoginPage implements OnInit {
     user.password = this.loginForm.value.password;
     this.service.login(user).subscribe(data=>{
       this.session = data;
+      environment.statusUser="1";
       window.localStorage.setItem("token", this.session.access_token);
       window.localStorage.setItem("user_id", this.session.user.id.toString());
       this.router.navigateByUrl('/', { skipLocationChange: true }).then(() =>

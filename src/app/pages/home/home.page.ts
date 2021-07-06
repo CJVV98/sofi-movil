@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { LoginService } from 'src/app/_service/login.service';
 import { UserService } from 'src/app/_service/user.service';
+import { environment } from 'src/environments/environment';
 
 @Component({
   selector: 'app-home',
@@ -12,16 +13,6 @@ export class HomePage implements OnInit {
   constructor(private service: LoginService) { }
 
   ngOnInit() {
-    if(window.localStorage.getItem("token") != undefined || window.localStorage.getItem("token")==null  ){
-      window.localStorage.setItem("token", "");
-      this.active=true;
-    }else{
-      if(window.localStorage.getItem("token")=="")
-       this.active=true;
-      else
-        this.active=false;
-    }
-    
+    this.active=environment.statusUser=="0";
   }
-
 }

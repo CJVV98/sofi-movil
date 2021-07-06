@@ -1,0 +1,27 @@
+<ion-header style="margin: 0% !important;">
+  <ion-toolbar class="toolbar">
+    <div class="contenedor">
+      <ion-img class="logo-header-start" src="./assets/img/Logo-SoFi_Horizontal.png">
+      </ion-img>
+      <ion-img class="logo-header" src="./assets/img/logoFiscalia.jpg">
+      </ion-img>
+    </div>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <br/>
+  <ion-title style="color:#01509f">FAVORITOS</ion-title>
+  <ion-searchbar style="color: black;" (keyup)="search($event)" ></ion-searchbar>
+    <ion-list *ngFor="let favorite of favorites" class="list-not">
+      <ion-item>
+        <ion-avatar slot="start">
+          <ion-icon name="bookmarks" style="font-size: 30px;"></ion-icon> 
+        </ion-avatar>
+        <ion-label>
+          <h3>{{favorite.titlearticle}}</h3>
+        </ion-label>
+      </ion-item>
+      
+    </ion-list>
+
+</ion-content>
