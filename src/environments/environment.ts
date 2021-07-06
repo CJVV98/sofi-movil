@@ -4,7 +4,8 @@
 
 export const environment = {
   HOST : "https://sofi.inkdigital.co/api",
-  production: false
+  production: false,
+  statusUser: "0",
 };
 
 /*

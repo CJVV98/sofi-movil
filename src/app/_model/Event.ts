@@ -1,3 +1,4 @@
+import { Notification } from "./Notification";
 import { Resource } from "./Resource";
 
 export class Event {   

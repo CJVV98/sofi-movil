@@ -36,15 +36,17 @@ import { Token } from "./Token";
         "userid": user,
         "articlesids": articles
       };
-      return this.http.post(`${environment.HOST}/addFavoriteArticlesToUser`, body);
+      let options = this.token.token();
+      return this.http.post(`${environment.HOST}/addFavoriteArticlesToUser`, body,options);
     }
 
-    verifyFavorite(user:number, article:number){
+    verifyFavorite(user:number, article:number):any{
       let body = {
         "userid": user,
         "articleid": article
       };
-      return this.http.post(`${environment.HOST}/existFavorite`, body);
+      let options = this.token.token();
+      return this.http.post(`${environment.HOST}/existFavorite`, body, options);
   
     }
 
@@ -53,7 +55,8 @@ import { Token } from "./Token";
         "userid": user,
         "articleid": article
       };
-      return this.http.post(`${environment.HOST}/removeFavoriteArticlesToUser`, body);
+      let options = this.token.token();
+      return this.http.post(`${environment.HOST}/removeFavoriteArticlesToUser`, body, options);
   
     }
 
@@ -64,15 +67,25 @@ import { Token } from "./Token";
         "qualification":qualification,
         "details":details
       };
-      return this.http.post(`${environment.HOST}/addScoreToArticles`, body);
+      let options = this.token.token();
+      return this.http.post(`${environment.HOST}/addScoreToArticles`, body, options);
   
     }
 
-    getScore(user:number){
+    getScore(user:number):any{
       let body = {
         "userid":user
       };
-      return this.http.post(`${environment.HOST}/getScoresByUser`, body);
+      let options = this.token.token();
+      return this.http.post(`${environment.HOST}/getScoresByUser`, body, options);
+  
+    }
+    getFavorites(user:number):any{
+      let body = {
+        "userid":user
+      };
+      let options = this.token.token();
+      return this.http.post(`${environment.HOST}/getFavoriteArticlesByUser`, body, options);
   
     }
    

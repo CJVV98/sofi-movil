@@ -19,4 +19,5 @@ export class InfoUser {
     user!: string;
     state!:string;
     roles!:any[];
+    photo!:string;
 }

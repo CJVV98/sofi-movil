@@ -8,18 +8,14 @@ import { Token } from './Token';
 @Injectable({
   providedIn: 'root'
 })
-export class UserService {
+export class NotificationService {
   url: string = `${environment.HOST}/`;
   constructor(private http: HttpClient, private token:Token) { }
 
 
-  consultUser(id:string):any{
+  consult():any{
     let options=this.token.token();
-    return this.http.get<InfoUser>(`${this.url}users/${id}`, options);
+    return this.http.get<any>(`${this.url}notifications`, options);
   }
 
-  edit(user:InfoUser, id:number){
-    let options=this.token.token();
-    return this.http.put(`${this.url}users/${id}`, user, options);
-  }
 }
