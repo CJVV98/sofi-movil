@@ -5,7 +5,8 @@ import { AlertController } from '@ionic/angular';
 import { Session } from 'src/app/_model/Session';
 import { User } from 'src/app/_model/User';
 import { LoginService } from 'src/app/_service/login.service';
-import { environment } from 'src/environments/environment';
+import { environment } from 'src/environments/environment.prod';
+
 
 @Component({
   selector: 'app-login',
